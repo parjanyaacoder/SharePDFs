@@ -29,6 +29,11 @@ function App() {
             <Route path="/signup" element={!user ? <Signup /> : <Navigate to="/dashboard" />} />
             <Route path="/login" element={!user ? <Login /> : <Navigate to="/dashboard" />} />
             <Route path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/login" />} />
+            <Route path="/upload" element={user ? <Upload /> : <Navigate to="/login" />} />
+            <Route path="/pdf/:id" element={user ? <PDFViewer /> : <Navigate to="/login" />} />
+            <Route path="/shared/:shareToken" element={<SharedPDFViewer />} />
+            <Route path="/" element={<Navigate to={user ? '/dashboard' : '/login'} replace />} />
+            <Route path="*" element={<Navigate to={user ? '/dashboard' : '/login'} replace />} />
           </Routes>
         </main>
       </div>
