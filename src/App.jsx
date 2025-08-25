@@ -7,6 +7,9 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Header from './components/Header';
+import PDFViewer from './components/PDFViewer';
+import SharedPDFViewer from './components/SharedPDFViewer';
+import Upload from './components/Upload';
 import { auth } from '../firebase';
 
 function App() {
